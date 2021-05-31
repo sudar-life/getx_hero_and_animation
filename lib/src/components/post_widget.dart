@@ -24,10 +24,7 @@ class PostWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Hero(
-              tag: uid,
-              child: Image.asset(thumbnail),
-            ),
+            Image.asset(thumbnail),
             Padding(
               padding: const EdgeInsets.only(
                   top: 10, bottom: 20, left: 10, right: 10),

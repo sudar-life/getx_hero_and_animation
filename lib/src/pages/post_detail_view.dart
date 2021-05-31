@@ -14,28 +14,16 @@ class PostDetailView extends GetView<TextAnimation> {
       ),
       body: Column(
         children: [
-          Hero(
-            tag: controller.post!['uid']!,
-            child: Image.asset(controller.post!['thumbnail']!),
-          ),
-          FadeTransition(
-            opacity: controller.animationController!,
-            child: Column(
-              children: [
-                SlideTransition(
-                  position: controller.animationOffset!,
-                  child: Text(
-                    controller.post!['title']!,
-                  ),
-                ),
-                SlideTransition(
-                  position: controller.animationOffsetLeftToRight!,
-                  child: Text(
-                    controller.post!['description']!,
-                  ),
-                ),
-              ],
-            ),
+          Image.asset(controller.post!['thumbnail']!),
+          Column(
+            children: [
+              Text(
+                controller.post!['title']!,
+              ),
+              Text(
+                controller.post!['description']!,
+              ),
+            ],
           ),
         ],
       ),
